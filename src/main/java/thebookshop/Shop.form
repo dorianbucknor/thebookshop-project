@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="thebookshop.Shop">
+  <grid id="27dc6" binding="mainPanel" layout-manager="CardLayout" hgap="0" vgap="0" show="2348c">
+    <constraints>
+      <xy x="20" y="20" width="1024" height="709"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+      <enabled value="true"/>
+      <foreground color="-3368602"/>
+      <inheritsPopupMenu value="false"/>
+      <maximumSize width="1920" height="1080"/>
+      <minimumSize width="800" height="600"/>
+      <opaque value="true"/>
+      <preferredSize width="1000" height="720"/>
+      <visible value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="2348c" binding="mainScreen" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints>
+          <card name="mainScreen"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <maximumSize width="1920" height="2147483647"/>
+          <minimumSize width="-1" height="630"/>
+          <name value="mainScreen"/>
+          <opaque value="true"/>
+          <preferredSize width="1000" height="630"/>
+          <visible value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="58f3e" binding="topBar" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints border-constraint="North"/>
+            <properties>
+              <background color="-5127230"/>
+              <maximumSize width="1920" height="2147483647"/>
+              <minimumSize width="-1" height="-1"/>
+              <opaque value="true"/>
+              <preferredSize width="1000" height="140"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f1699" class="javax.swing.JLabel" binding="search">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <autoscrolls value="false"/>
+                  <background color="-10143975"/>
+                  <font name="An Unfortunate Event DeWarped" size="22" style="1"/>
+                  <foreground color="-1"/>
+                  <horizontalAlignment value="0"/>
+                  <maximumSize width="1920" height="43"/>
+                  <minimumSize width="-1" height="-1"/>
+                  <opaque value="true"/>
+                  <preferredSize width="1000" height="45"/>
+                  <text value="The Book Shop"/>
+                </properties>
+              </component>
+              <grid id="6d114" binding="searchBox" layout-manager="FlowLayout" hgap="5" vgap="10" flow-align="1">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-12709888"/>
+                  <maximumSize width="1920" height="32767"/>
+                  <minimumSize width="-1" height="-1"/>
+                  <preferredSize width="400" height="55"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="e58f3" class="javax.swing.JLabel" binding="bookTitleLabel">
+                    <constraints/>
+                    <properties>
+                      <foreground color="-1732829"/>
+                      <requestFocusEnabled value="false"/>
+                      <text value="Book"/>
+                    </properties>
+                  </component>
+                  <component id="d908d" class="javax.swing.JTextField" binding="bookTitleField">
+                    <constraints/>
+                    <properties>
+                      <minimumSize width="100" height="30"/>
+                      <preferredSize width="140" height="30"/>
+                    </properties>
+                  </component>
+                  <hspacer id="8b4c1">
+                    <constraints/>
+                  </hspacer>
+                  <component id="b0a94" class="javax.swing.JLabel" binding="authorLabel">
+                    <constraints/>
+                    <properties>
+                      <foreground color="-1732829"/>
+                      <requestFocusEnabled value="false"/>
+                      <text value="Author"/>
+                    </properties>
+                  </component>
+                  <component id="2fb75" class="javax.swing.JTextField" binding="authorField">
+                    <constraints/>
+                    <properties>
+                      <preferredSize width="140" height="30"/>
+                    </properties>
+                  </component>
+                  <hspacer id="79527">
+                    <constraints/>
+                  </hspacer>
+                  <component id="2b596" class="javax.swing.JLabel" binding="publishedYearLabel">
+                    <constraints/>
+                    <properties>
+                      <foreground color="-1732829"/>
+                      <text value="Published Year "/>
+                    </properties>
+                  </component>
+                  <component id="7b001" class="javax.swing.JTextField" binding="publishedYearField">
+                    <constraints/>
+                    <properties>
+                      <columns value="0"/>
+                      <preferredSize width="100" height="30"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="febc3" class="javax.swing.JButton" binding="searchButton">
+                <constraints border-constraint="South"/>
+                <properties>
+                  <background color="-13882563"/>
+                  <borderPainted value="true"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
+                  <font name="Action Man" size="16" style="0"/>
+                  <foreground color="-1732829"/>
+                  <label value="Search For Book"/>
+                  <minimumSize width="-1" height="-1"/>
+                  <opaque value="true"/>
+                  <preferredSize width="165" height="40"/>
+                  <text value="Search For Book"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="d634f" binding="bottomBar" layout-manager="GridLayoutManager" row-count="1" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints border-constraint="South"/>
+            <properties>
+              <background color="-12709888"/>
+              <minimumSize width="-1" height="-1"/>
+              <preferredSize width="232" height="40"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="26e3b" class="javax.swing.JButton" binding="leaveButton">
+                <constraints>
+                  <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1732829"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <foreground color="-13882563"/>
+                  <opaque value="true"/>
+                  <selected value="false"/>
+                  <text value="Leave Shop"/>
+                </properties>
+              </component>
+              <component id="145b5" class="javax.swing.JButton" binding="returnBooksBtn">
+                <constraints>
+                  <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <autoscrolls value="true"/>
+                  <background color="-13882563"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <defaultCapable value="true"/>
+                  <doubleBuffered value="false"/>
+                  <focusPainted value="true"/>
+                  <foreground color="-1732829"/>
+                  <hideActionText value="false"/>
+                  <opaque value="true"/>
+                  <text value="Return Books"/>
+                </properties>
+              </component>
+              <hspacer id="e06ce">
+                <constraints>
+                  <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="db858">
+                <constraints>
+                  <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="94cec">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="71a35">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="2295c">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="a6ac">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <grid id="62e03" binding="resultControls" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <opaque value="false"/>
+                  <visible value="false"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9c94d" class="javax.swing.JButton" binding="cancelSearchButton">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-13882563"/>
+                      <borderPainted value="false"/>
+                      <contentAreaFilled value="false"/>
+                      <foreground color="-1732829"/>
+                      <opaque value="true"/>
+                      <text value="Cancel"/>
+                    </properties>
+                  </component>
+                  <component id="f8368" class="javax.swing.JButton" binding="viewBookButton">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1732829"/>
+                      <borderPainted value="false"/>
+                      <contentAreaFilled value="false"/>
+                      <foreground color="-13882563"/>
+                      <opaque value="true"/>
+                      <text value="View Book"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <hspacer id="614a7">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+            </children>
+          </grid>
+          <grid id="a00fd" binding="center" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <minimumSize width="600" height="600"/>
+              <opaque value="false"/>
+              <preferredSize width="600" height="600"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="17f77" binding="results_list" layout-manager="CardLayout" hgap="0" vgap="0" show="e0e9b">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-1180673"/>
+                  <opaque value="false"/>
+                  <preferredSize width="600" height="500"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="2268c" binding="resultPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints>
+                      <card name="resultCard"/>
+                    </constraints>
+                    <properties>
+                      <alignmentX value="1.0"/>
+                      <autoscrolls value="false"/>
+                      <background color="-12828863"/>
+                      <minimumSize width="100" height="200"/>
+                      <opaque value="false"/>
+                      <preferredSize width="400" height="450"/>
+                      <visible value="false"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="bab26" binding="bookFoundPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <minimumSize width="10" height="450"/>
+                          <preferredSize width="10" height="450"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                    </children>
+                  </grid>
+                  <scrollpane id="e0e9b" binding="allBooksScroll">
+                    <constraints>
+                      <card name="allBooksCard"/>
+                    </constraints>
+                    <properties>
+                      <horizontalScrollBarPolicy value="31"/>
+                      <minimumSize width="600" height="500"/>
+                      <opaque value="false"/>
+                      <preferredSize width="600" height="500"/>
+                      <verticalScrollBarPolicy value="22"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="55954" binding="allBooksPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints/>
+                        <properties>
+                          <background color="-1180417"/>
+                          <minimumSize width="300" height="20000"/>
+                          <opaque value="true"/>
+                          <preferredSize width="300" height="6000"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="6280a" binding="bookView" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints>
+          <card name="bookView"/>
+        </constraints>
+        <properties>
+          <name value="bookView"/>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="16283" binding="controls" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="South"/>
+            <properties>
+              <background color="-12709888"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="c6e19" class="javax.swing.JButton" binding="viewExitButton">
+                <constraints/>
+                <properties>
+                  <background color="-13882563"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <foreground color="-1732829"/>
+                  <opaque value="true"/>
+                  <text value="Exit"/>
+                </properties>
+              </component>
+              <hspacer id="692c6">
+                <constraints/>
+              </hspacer>
+              <component id="af4b" class="javax.swing.JLabel" binding="bookPrice">
+                <constraints/>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Action Man" size="18" style="1"/>
+                  <foreground color="-1732829"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <opaque value="false"/>
+                  <preferredSize width="80" height="16"/>
+                  <text value="$ 10000"/>
+                </properties>
+              </component>
+              <hspacer id="38a2">
+                <constraints/>
+              </hspacer>
+              <component id="ca4f8" class="javax.swing.JButton" binding="rentBookButton">
+                <constraints/>
+                <properties>
+                  <background color="-1732829"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <foreground color="-13882563"/>
+                  <opaque value="true"/>
+                  <text value="Rent"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="8367b" binding="bookCoverImage" layout-manager="FlowLayout" hgap="10" vgap="20" flow-align="1">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <minimumSize width="200" height="100"/>
+              <opaque value="false"/>
+              <preferredSize width="10" height="450"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="89e6f" binding="titleBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="North"/>
+            <properties>
+              <background color="-10143975"/>
+              <doubleBuffered value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="35145" class="javax.swing.JLabel">
+                <constraints/>
+                <properties>
+                  <background color="-13882563"/>
+                  <foreground color="-1732829"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <opaque value="true"/>
+                  <preferredSize width="40" height="24"/>
+                  <text value="Title"/>
+                </properties>
+              </component>
+              <component id="e6203" class="javax.swing.JLabel" binding="bookTitle">
+                <constraints/>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <autoscrolls value="false"/>
+                  <background color="-1732829"/>
+                  <foreground color="-13882563"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <maximumSize width="1000" height="16"/>
+                  <minimumSize width="80" height="16"/>
+                  <opaque value="true"/>
+                  <preferredSize width="250" height="24"/>
+                  <text value="Label"/>
+                </properties>
+              </component>
+              <hspacer id="7c75c">
+                <constraints/>
+              </hspacer>
+              <component id="56d8" class="javax.swing.JLabel">
+                <constraints/>
+                <properties>
+                  <background color="-13882563"/>
+                  <foreground color="-1732829"/>
+                  <horizontalAlignment value="0"/>
+                  <opaque value="true"/>
+                  <preferredSize width="48" height="24"/>
+                  <text value="Author"/>
+                </properties>
+              </component>
+              <component id="3463" class="javax.swing.JLabel" binding="bookAuthor">
+                <constraints/>
+                <properties>
+                  <background color="-1732829"/>
+                  <foreground color="-13882563"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="2"/>
+                  <maximumSize width="1000" height="16"/>
+                  <opaque value="true"/>
+                  <preferredSize width="250" height="24"/>
+                  <text value="Label"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="b759a" binding="returnBooks" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints>
+          <card name="returnBooks"/>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="626f4" binding="returnTopBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="North"/>
+            <properties>
+              <background color="-10143975"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a6064" class="javax.swing.JLabel">
+                <constraints/>
+                <properties>
+                  <font name="Action Man" size="20"/>
+                  <foreground color="-1732829"/>
+                  <horizontalAlignment value="0"/>
+                  <maximumSize width="400" height="18"/>
+                  <preferredSize width="300" height="30"/>
+                  <text value="Return Books"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="ff978" binding="returnBtmBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="South"/>
+            <properties>
+              <background color="-12709888"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="15329" class="javax.swing.JButton" binding="returnExitBtn">
+                <constraints/>
+                <properties>
+                  <background color="-13882563"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <foreground color="-1732829"/>
+                  <opaque value="true"/>
+                  <text value="Exit"/>
+                </properties>
+              </component>
+              <hspacer id="8805">
+                <constraints/>
+              </hspacer>
+              <component id="50a4d" class="javax.swing.JButton" binding="returnAllBtn">
+                <constraints/>
+                <properties>
+                  <background color="-1732829"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <foreground color="-13882563"/>
+                  <opaque value="true"/>
+                  <text value="Return All"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <scrollpane id="538a0" binding="rentedBooksScroll">
+            <constraints border-constraint="Center"/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="cc1b1" binding="rentedBooksPanel" layout-manager="FlowLayout" hgap="30" vgap="15" flow-align="1">
+                <constraints/>
+                <properties>
+                  <preferredSize width="60" height="1080"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
