@@ -243,6 +243,7 @@ public class Shop extends JFrame {
                 }
                 //Change screen
                 ((CardLayout) mainPanel.getLayout()).show(mainPanel, "mainScreen");
+                ((CardLayout) results_list.getLayout()).show(results_list, "allBooksCard");
             }
         });
 
