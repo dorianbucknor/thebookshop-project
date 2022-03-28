@@ -6,9 +6,9 @@ public class Node{
     protected Book book;
     protected Node left;
     protected Node right;
-    protected String color;
-    protected String hash;
+    protected Color color;
     protected Node parent;
+    protected String key;
 
     /**
      * Creates a node with default values
@@ -18,7 +18,7 @@ public class Node{
         book = null;
         left = null;
         right = null;
-        hash = "";
+        color = Color.RED;
     }
 
     /**
@@ -29,7 +29,8 @@ public class Node{
      */
     public Node(Book book) {
         this.book = book;
-        this.hash = DigestUtils.sha256Hex(book.indexer);
+        key = book.indexer;
+        color = Color.RED;
     }
 
     /**
@@ -41,7 +42,7 @@ public class Node{
         this.color = node.color;
         this.left = node.left;
         this.right = node.right;
-        this.hash = node.hash;
+        this.key = node.key;
     }
 
     /**
@@ -57,7 +58,7 @@ public class Node{
      * @return true if theis node is the left child false otherwise
      */
     boolean isLeftChild(){
-        return this == parent.left;
+        return this == this.parent.left;
     };
 
     /**
@@ -65,7 +66,7 @@ public class Node{
      * @return true if theis node is the right child false otherwise
      */
     boolean isRightChild(){
-        return this == parent.right;
+        return this == this.parent.right;
     };
 
     /**
@@ -97,7 +98,7 @@ public class Node{
      * @return the uncle node
      */
     Node getUncle(){
-        return parent.getSibling();
+        return this.parent.getSibling();
     }
 
     /**
@@ -129,21 +130,21 @@ public class Node{
      * @throws IllegalStateException if node
      */
     Node getSibling(){
-        if (this == parent.left) {
-            return parent.right;
+        if (this == this.parent.left) {
+            return this.parent.right;
         } else {
-            return parent.left;
+            return this.parent.left;
         }
     }
 
     /**
      * Rotates node color
      */
-    void switchColor(){
-        if(color.equals("RED")){
-            color = "BLACK";
-        }else{
-            color = "RED";
+    void switchColor() {
+        if (color == Color.RED) {
+            color = Color.BLACK;
+        } else {
+            color = Color.RED;
         }
     }
 
@@ -162,7 +163,14 @@ public class Node{
         return right != null;
     }
 
-    //Getters and setters
+    public Node getGrandparent() {
+        if (this.isParent()) {
+            return this.getParent().getParent();
+        } else {
+            return null;
+        }
+    }
+
 
     public Book getBook() {
         return book;
@@ -188,27 +196,132 @@ public class Node{
         this.right = right;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
-    }
-
-    public String getHash() {
-        return hash;
-    }
-
-    public void setHash(String hash) {
-        this.hash = hash;
-    }
-
-    public Node getParent() {
-        return parent;
     }
 
     public void setParent(Node parent) {
         this.parent = parent;
     }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+
+    public boolean isRed() {
+        return this.color == Color.RED;
+    }
+
+    public boolean isLeaf() {
+        return this.left == null && this.right == null;
+    }
+
+    public boolean isRoot() {
+        return this.parent == null;
+    }
+
+    public boolean isParent() {
+        return this.parent != null;
+    }
+
+    public boolean isUncle() {
+        if (this.isParent()) {
+            if (this.isLeftChild()) {
+                return this.getParent().getRight() != null;
+            } else {
+                return this.getParent().getLeft() != null;
+            }
+        } else {
+            return false;
+        }
+    }
+
+
+    public boolean isGrandparent() {
+        if (this.isParent()) {
+            return this.getParent().getParent() != null;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isSibling() {
+        if (this.isParent()) {
+            if (this.isLeftChild()) {
+                return this.getParent().getRight() != null;
+            } else {
+                return this.getParent().getLeft() != null;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isChildOf(Node node) {
+        if (this.isParent()) {
+            if (this.isLeftChild()) {
+                return this.getParent().getLeft() == node;
+            } else {
+                return this.getParent().getRight() == node;
+            }
+        } else {
+            return false;
+        }
+    }
+
+
+    public Node getParent(){
+        return parent;
+    }
+
+    public boolean isSiblingOf(Node node) {
+        if (this.isParent()) {
+            if (this.isLeftChild()) {
+                return this.getParent().getRight() == node;
+            } else {
+                return this.getParent().getLeft() == node;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isParentOf(Node node) {
+        return this.getLeft() == node || this.getRight() == node;
+    }
+
+    public boolean isGrandparentOf(Node node) {
+        if (this.isParent()) {
+            return this.getParent().getParent() == node;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isUncleOf(Node node) {
+        if (this.isParent()) {
+            if (this.isLeftChild()) {
+                return this.getParent().getRight() == node;
+            } else {
+                return this.getParent().getLeft() == node;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public enum Color{
+        BLACK,
+        RED
+    }
 }
+

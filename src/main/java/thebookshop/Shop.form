@@ -9,7 +9,7 @@
       <enabled value="true"/>
       <foreground color="-3368602"/>
       <inheritsPopupMenu value="false"/>
-      <maximumSize width="1920" height="1080"/>
+      <maximumSize width="3140" height="2160"/>
       <minimumSize width="800" height="600"/>
       <opaque value="true"/>
       <preferredSize width="1000" height="720"/>
@@ -285,7 +285,7 @@
                       <minimumSize width="100" height="200"/>
                       <opaque value="false"/>
                       <preferredSize width="400" height="450"/>
-                      <visible value="false"/>
+                      <visible value="true"/>
                     </properties>
                     <border type="none"/>
                     <children>
@@ -533,21 +533,40 @@
               </component>
             </children>
           </grid>
-          <scrollpane id="538a0" binding="rentedBooksScroll">
+          <grid id="71dcc" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints border-constraint="Center"/>
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="cc1b1" binding="rentedBooksPanel" layout-manager="FlowLayout" hgap="30" vgap="15" flow-align="1">
-                <constraints/>
+              <scrollpane id="538a0" binding="rentedBooksScroll">
+                <constraints border-constraint="Center"/>
                 <properties>
-                  <preferredSize width="60" height="1080"/>
+                  <opaque value="false"/>
+                  <preferredSize width="60" height="2400"/>
                 </properties>
                 <border type="none"/>
-                <children/>
-              </grid>
+                <children>
+                  <grid id="f696f" binding="rentedBooksPanel" layout-manager="FlowLayout" hgap="30" vgap="30" flow-align="1">
+                    <constraints/>
+                    <properties>
+                      <opaque value="false"/>
+                      <preferredSize width="1055" height="1200"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </scrollpane>
+              <component id="a7d71" class="thebookshop.BackgroundPanel" binding="backgroundPanel2" custom-create="true" default-binding="true">
+                <constraints border-constraint="East"/>
+                <properties/>
+              </component>
+              <component id="fab0d" class="thebookshop.BackgroundPanel" binding="backgroundPanel1" custom-create="true" default-binding="true">
+                <constraints border-constraint="West"/>
+                <properties/>
+              </component>
             </children>
-          </scrollpane>
+          </grid>
         </children>
       </grid>
     </children>
