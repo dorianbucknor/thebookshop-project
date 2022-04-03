@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class Books extends RBT {
+public class Books extends RedBlackTree {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private File userFile;
     private ArrayList<Book> books;
